@@ -11,14 +11,14 @@ function App() {
 
   useEffect(() => {
     if (count === 0) {
-      setIsHidden = true;
+      setIsHidden(true);
     }
   }, [count])
 
   return (
     <div className="App">
       <p>{count}</p>
-      {isHidden ? <p>You can no longer decrease the counter</p> : <button onClick={() => setCount(count - 1)}>click me!</button>}
+      {isHidden ? <p>You can no longer decrease the counter!</p> : <button onClick={() => setCount(count - 1)}>click me!</button>}
     </div >
   );
 }
